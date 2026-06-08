@@ -1,0 +1,24 @@
+# kind the type of Kubernetes resource being used.
+# ConfigMap = stores non-secret key/value configuration data.
+kind = ConfigMap
+
+# metadata = identifying information about the resource.
+metadata:
+  # name = Kubernetes resource name.
+  name: gitops-config-demo
+
+  # namespace = Kubernetes namespace wherfe this ConfigMap will exist.
+  # gitops-demo = dedicated namewspace for this GitOps test.
+  namespace: gitops-demo
+
+# data = key/value content stored inside the ConfigMap.
+# This is non-secret configuration data.
+data:
+  # lab-owner = example config key.
+  lab-owner: "Andrew"
+
+  #managed-by = proves this object is controlld by Argo CD through Git.
+  managed-by: "Argo CD"
+
+  #message = text value we will later modify in Git.
+  message: "Created from GitHub and synced by Argo CD"
