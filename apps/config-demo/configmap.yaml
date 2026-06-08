@@ -25,4 +25,4 @@ data:
   managed-by: "Argo CD"
 
   # message = test value we will later modify in Git.
-  message: "Created from GitHub and synced by Argo CD"
+  message: "Updated from GitHub and automatically synced by Argo CD"
