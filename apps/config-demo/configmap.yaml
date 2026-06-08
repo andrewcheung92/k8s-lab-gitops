@@ -1,0 +1,28 @@
+# apiVersion = Kubernetes API version used for this resource.
+# v1 = core Kubernetes API group version.
+apiVersion: v1
+
+# kind = the type of Kubernetes resource being created.
+# ConfigMap = stores non-secret key/value configuration data.
+kind: ConfigMap
+
+# metadata = identifying information about the resource.
+metadata:
+  # name = Kubernetes resource name.
+  name: gitops-config-demo
+
+  # namespace = Kubernetes namespace where this ConfigMap will exist.
+  # gitops-demo = dedicated namespace for this GitOps test.
+  namespace: gitops-demo
+
+# data = key/value content stored inside the ConfigMap.
+# This is non-secret configuration data.
+data:
+  # lab-owner = example config key.
+  lab-owner: "Andrew"
+
+  # managed-by = proves this object is controlled by Argo CD through Git.
+  managed-by: "Argo CD"
+
+  # message = test value we will later modify in Git.
+  message: "Created from GitHub and synced by Argo CD"
