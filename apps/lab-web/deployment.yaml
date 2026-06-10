@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab-web
+  namespace: lab-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lab-web
+    template:
+      metadata:
+        labels:
+          app: lab-web
+      spec:
+        containers:
+          - name: lab-web
+            image: nginx:stable
+            ports:
+              - containerPort: 80
