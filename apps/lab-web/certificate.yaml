@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: lab-web-cert
+  namespace: lab-web
+spec:
+  secretName: lab-web-tls
+  duration: 8760h
+  renewBefore: 720h
+  privateKey:
+    algorithm: RSA
+    size: 2048
+  commonName: lab-web.k8s.lab
+  dnsName:
+    - lab-web.k8s.lab
+  issuerRef:
+    name: k8s-lab-ca
+    kind: ClusterIssuer
