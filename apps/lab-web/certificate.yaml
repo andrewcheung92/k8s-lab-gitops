@@ -11,7 +11,7 @@ spec:
     algorithm: RSA
     size: 2048
   commonName: lab-web.k8s.lab
-  dnsName:
+  dnsNames:
     - lab-web.k8s.lab
   issuerRef:
     name: k8s-lab-ca
