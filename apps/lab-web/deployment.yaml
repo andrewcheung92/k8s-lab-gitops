@@ -18,3 +18,11 @@ spec:
           image: nginx:stable
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: lab-web-html-volume
+              mountPath: /usr/share/nginx/html/index.html
+              subPath: index.html
+      volumes:
+        - name: lab-web-html-volume
+          configMap:
+            name: lab-web-html
