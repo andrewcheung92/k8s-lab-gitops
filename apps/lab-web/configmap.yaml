@@ -40,9 +40,9 @@ data:
     <body>
       <div class="card">
         <h1>Andrew's Kubernetes GitOps Lab</h1>
-        <p class="status">Deployed successfully through Argo CD</p>
+        <p class="status">Updated through GitOps and automatically synced by Argo CD</p>
         <p>This page is served by Nginx running inside Kubernetes.</p>
-        <p>The application is managed from GitHub using GitOps.</p>
+        <p>The page was updated in GitHub and delivered through Argo CD</p>
         <p>Traffic path: GitHub → Argo CD → Kubernetes → Traefik → MetalLB → Browser</p>
       </div>
     </body>
